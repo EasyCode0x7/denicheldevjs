@@ -49,7 +49,7 @@ let foods = {
     plums: 28
 };  
 foods['bananas'] = 13;
-foods['grapes'] = 35;
+foods['grapes']
 foods['strawberries'] = 27;
 console.log(foods);
 
@@ -70,3 +70,15 @@ console.log(userActivity);
 
 //  Accede a los nombres de propiedad con la notación de corchetes
 
+let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+};
+function checkInventory(scannedItem) {
+    
+}
+console.log(checkInventory("apples"));
