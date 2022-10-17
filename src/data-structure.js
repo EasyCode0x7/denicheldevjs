@@ -82,4 +82,3 @@ function checkInventory(scannedItem) {
     
 }
 console.log(checkInventory("apples"));
-dd
