@@ -176,10 +176,49 @@ console.log(bouncer([7, "ate", "", false, 9]));
 //  Dónde pertenezco
 
 function getIndexToIns(arr, num) {
-  
+  arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= num)
+                return i;
 }
-getIndexToIns([40, 60], 50);
+  return arr.length;
+}
+console.log(getIndexToIns([40, 60], 50));
 
 
 
-//  
+//  Mutaciones
+
+function mutation(arr) {
+        let test = arr[1].toLowerCase();
+        let target = arr[0].toLowerCase();
+        for (let i = 0; i < test.length; i++) {
+                if (target.indexOf(test[i]) < 0) return false;
+        }
+        return true;
+}
+console.log(mutation(["hello", "hey"]));
+
+
+
+//  Monito Trocitos
+// pendiente de revisar para estudiarlo
+
+function chunkArrayInGroups(arr, size) {
+        let temp = [];
+        let result = [];
+      
+        for (let a = 0; a < arr.length; a++) {
+                if (a % size !== size - 1) temp.push(arr[a]);
+                else {
+                        temp.push(arr[a]);
+                        result.push(temp);
+                        temp = [];
+                }
+        }
+        if (temp.length !== 0) result.push(temp);
+        return result;
+}
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
