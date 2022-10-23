@@ -1,4 +1,4 @@
-//  Convierte Celsius a Fahrenheit
+º//  Convierte Celsius a Fahrenheit
 
 function convertCtoF(celsius) {
     let fahrenheit = celsius * (9/5) + 32;
@@ -206,19 +206,19 @@ console.log(mutation(["hello", "hey"]));
 // pendiente de revisar para estudiarlo
 
 function chunkArrayInGroups(arr, size) {
-        let temp = [];
-        let result = [];
-      
-        for (let a = 0; a < arr.length; a++) {
-                if (a % size !== size - 1) temp.push(arr[a]);
-                else {
-                        temp.push(arr[a]);
-                        result.push(temp);
-                        temp = [];
-                }
+    let temp = [];
+    let result = [];
+  
+    for (let a = 0; a < arr.length; a++) {
+        if (a % size !== size - 1) temp.push(arr[a]);
+        else {
+            temp.push(arr[a]);
+            result.push(temp);
+            temp = [];
         }
-        if (temp.length !== 0) result.push(temp);
-        return result;
+    }
+    if (temp.length !== 0) result.push(temp);
+    return result;
 }
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
